@@ -11,6 +11,7 @@ namespace Programming.Tasks
             Console.WriteLine("Factorial of {0} is .. ",val);
             MindStromTasks.PrintFactorial(val);
             MindStromTasks.PrintTriangle(val);
+            MindStromTasks.PrintStar(val);
         }
     }
 }
