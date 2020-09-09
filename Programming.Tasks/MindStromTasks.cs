@@ -27,17 +27,18 @@ namespace Programming.Tasks
         }
         public static void PrintStar(int number)
         {
-            for (int i = 1; i <= number; i++)
+            for (int i = 0; i <= number; i++)
             {
-                for (int j = i; j < 2*number-i; j++)
+                for (int j = i; j <= number-i; j++)
                 {
-                    for (int k = 0; k <j; k++)
+                    Console.Write(" ");
+                    for (int k = j+1; k <2*number-j; k++)
                     {
                         Console.Write("* ");
                     }
-                    
+                    Console.WriteLine();
                 }
-                Console.WriteLine();
+                
             }
 
         }
