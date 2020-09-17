@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Programming.Tasks
 {
@@ -27,20 +29,32 @@ namespace Programming.Tasks
         }
         public static void PrintStar(int number)
         {
-            for (int i = 0; i <= number; i++)
+            var temp = number;
+            for (int j = 1; j <= number; j++)
             {
-                for (int j = i; j <= number-i; j++)
+                for (int k = 0; k < 2 * temp - 1; k++)
                 {
-                    Console.Write(" ");
-                    for (int k = j+1; k <2*number-j; k++)
-                    {
-                        Console.Write("* ");
-                    }
-                    Console.WriteLine();
+                    Console.Write("* ");
                 }
-                
-            }
+                Console.WriteLine();
+                for (int i = 0; i < j; i++)
+                {
 
+                    Console.Write("  ");
+                }
+
+                temp--;
+            }
+        }
+
+        public static void FindLowestDecimal(int number)
+        {
+
+            char[] chars=number.ToString().ToCharArray();
+            
+            // TODO: Need to further dig in
+            var result =Convert.ToInt32(chars.Min());
+            Console.WriteLine(result);
         }
     }
 }
